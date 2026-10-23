@@ -1,0 +1,41 @@
+{
+  "name": "dsh-first-prompt-bar",
+  "version": "0.6.0",
+  "description": "Persistent bar above the conversation showing the session's first prompt, with copy and a panel of every prompt sent · 会话首条提问常驻条：复制 + 全部提问面板",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./client": { "default": "./lib/client.js" },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib/**/*.js", "cordis.patch.yml", "README.md", "README.zh.md"],
+  "keywords": ["deepseek-harness", "dsh-plugin", "prompt", "clipboard", "首条提问"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1010231693/dsh-first-prompt-bar.git"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1-rc.1 <5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
