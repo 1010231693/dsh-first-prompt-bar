@@ -14,6 +14,10 @@ This plugin lets you see (and copy) the first prompt you sent in a DSH agent ses
 
 ![Expanded panel: every prompt sent in this session, each with a copy icon](assets/screenshot-panel-expanded.jpg)
 
+**3 — Appearance picker.** The slider icon in the panel header (left of ×, lit here because the picker is open) opens an appearance picker directly under the header: eight looks, each drawn as a mini preview of the bar, with **Reset** beside the section title `外观` ("appearance"). The look in use — `丁 · 潮汐` here — is outlined and carries a check badge in its corner, and the pinned bar at the top of the shot is wearing exactly that look. The switch on the bottom row turns the motion effects (badge glow, copy flash, hover light sweep) on or off without touching any color; clicking a swatch repaints the bar on the spot — no restart, no reload — and the pick is remembered for the next time you open DSH.
+
+![Appearance picker: eight looks as mini bar previews, the one in use ticked](assets/screenshot-appearance-picker.jpg)
+
 ## Usage
 
 | Action | Result |
