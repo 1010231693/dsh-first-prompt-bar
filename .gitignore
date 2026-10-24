@@ -3,3 +3,6 @@ dist/
 *.log
 npm-debug.log*
 .DS_Store
+
+# 原型参考页：本地留档用，不进仓库（仓库只保留插件源码）
+prototypes/
