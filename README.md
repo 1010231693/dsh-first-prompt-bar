@@ -25,8 +25,12 @@ This plugin lets you see (and copy) the first prompt you sent in a DSH agent ses
 | Press `Esc` | Collapse |
 | Copy icon on the bar | First prompt's raw text goes to the clipboard; the icon ticks to a check mark |
 | Hover a panel row and click its small copy icon | That prompt's raw text goes to the clipboard |
+| Slider icon in the panel header (left of ×) | Open the appearance picker; click the same icon again to close |
+| Click a swatch in the appearance picker | The bar takes that look immediately — no restart — and the choice is remembered |
 
 The panel lists only prompts **you** sent — injected context, wake-up context, time context and compact checkpoints are all excluded — oldest first; prompts later overwritten are dropped. Everything stays local: records live in `localStorage` under the session id, no network requests, no telemetry.
+
+**Eight switchable looks.** The picker holds eight presets (ink, phosphor, jade, tide, ember, dusk, slate, half-band), each shown as a mini preview of the bar. Switching is instant and needs no restart — every look's CSS ships in the plugin and picking one only changes a class — and your pick is remembered in `localStorage` next to the prompt records. **Reset** returns to the default (ink). The switch in the picker's footer turns the motion effects (badge glow, copy flash, hover light sweep) on or off without changing any color; a system-wide "reduce motion" setting is respected automatically. All colors are the plugin's own CSS variables (`--fpb-*`), so you can override any of them from your own user styles.
 
 ## Installation
 
