@@ -1,7 +1,7 @@
 {
   "name": "dsh-first-prompt-bar",
-  "version": "0.7.0",
-  "description": "Persistent bar above the conversation showing the session's first prompt, with copy, a panel of every prompt sent, and eight switchable looks · 会话首条提问常驻条：复制 + 全部提问面板 + 八套可切换外观",
+  "version": "0.8.0",
+  "description": "Persistent bar above the conversation showing the session's first prompt, with copy, a panel of every prompt sent, and ten switchable looks (four light) · 会话首条提问常驻条：复制 + 全部提问面板 + 十套可切换外观（含四套亮色）",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
