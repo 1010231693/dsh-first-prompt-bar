@@ -1,4 +1,4 @@
-# dsh-first-prompt-bar
+# dsh-prompt-bar
 
 [中文](README.zh.md)
 
@@ -29,6 +29,7 @@ This plugin lets you see (and copy) the first prompt you sent in a DSH agent ses
 | Press `Esc` | Collapse |
 | Copy icon on the bar | First prompt's raw text goes to the clipboard; the icon ticks to a check mark |
 | Hover a panel row and click its small copy icon | That prompt's raw text goes to the clipboard |
+| Click a panel row (anywhere but its copy icon) | The panel collapses and the conversation jumps to that prompt, a frame flashing around it; if it was folded out of the loaded window, older history is paged in on the spot first (a short "loading" badge shows while it works) |
 | Slider icon in the panel header (left of ×) | Open the appearance picker; click the same icon again to close |
 | Click a swatch in the appearance picker | The bar takes that look immediately — no restart — and the choice is remembered |
 
@@ -38,13 +39,14 @@ The panel lists only prompts **you** sent — injected context, wake-up context,
 
 ## Installation
 
-- In the plugin market (dshmarket), install `dsh-first-prompt-bar` with one click; or run `dsh plugin add dsh-first-prompt-bar`.
+- In the plugin market (dshmarket), install `dsh-prompt-bar` with one click; or run `dsh plugin add dsh-prompt-bar`.
 - **After installing, restart the whole DSH application.** `Ctrl+R` / `F5` only reload the page; the client module graph is fixed when the web service starts, so without a restart the old code keeps running.
 - Requires DSH `>=0.2.1-rc.1` (developed and tested on DSH 0.2.1-rc.2 / DSH Desktop 0.12.1).
 
 ## Known limitations
 
 - **Old sessions (created before this plugin was installed): the first prompt may not come back.** This is a DSH-side limit, not a plugin bug: in long sessions, compaction prunes the bodies of very old events out of the data the client can read. In that case the bar shows the oldest prompt that can still be recovered, and an orange **Incomplete (不完整)** badge appears next to it (hover for the reason). You can manually click **Load older** in that session, refreshing the bar's prompt record until the session's true first prompt appears — once it does, the record is properly saved and never changes again (that is the first prompt in the theoretical sense).
+- **Jumping hits the same boundary.** Clicking a panel row jumps to that prompt in the conversation. If its body was already pruned by compaction (only very old prompts get that treatment), there is no rendered position left to point at: the bar shows a short notice instead of scrolling somewhere random. The same applies to a first prompt remembered from a session that predates the plugin, when its position was never recorded.
 
 ## License
 

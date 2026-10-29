@@ -1,7 +1,7 @@
 {
-  "name": "dsh-first-prompt-bar",
-  "version": "0.8.1",
-  "description": "Persistent bar above the conversation showing the session's first prompt, with copy, a panel of every prompt sent, and ten switchable looks (four light) · 会话首条提问常驻条：复制 + 全部提问面板 + 十套可切换外观（含四套亮色）",
+  "name": "dsh-prompt-bar",
+  "version": "0.9.2",
+  "description": "Persistent bar above the conversation showing the session's first prompt, with copy, a panel of every prompt sent (click a row to jump to it), and ten switchable looks (four light) · 会话首条提问常驻条：复制 + 全部提问面板（点一行跳到那条）+ 十套可切换外观（含四套亮色）",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1010231693/dsh-first-prompt-bar.git"
+    "url": "git+https://github.com/1010231693/dsh-prompt-bar.git"
   },
   "engines": {
     "dsh": ">=0.2.1-rc.1"
